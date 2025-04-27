@@ -1,0 +1,24 @@
+<!-- Buttons -->
+<div class="filters">
+    <button *ngFor="let cat of ['heads', 'arms', 'torsos', 'bases', 'all']"
+            (click)="selectedCategory = cat">
+      {{ cat | uppercase }}
+    </button>
+  </div>
+  
+  <!-- Product Grid -->
+  <div class="product-grid">
+    <div *ngFor="let item of filteredProducts()" class="product-card">
+      <img [src]="item.imageUrl" alt="Product">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.description }}</p>
+      <div class="price-original" *ngIf="item.discountPrice">
+        ${{ item.price.toFixed(2) }}
+      </div>
+      <div class="price-final">
+        ${{ (item.discountPrice || item.price).toFixed(2) }}
+      </div>
+      <button class="buy-button" (click)="addToCart(item)">Buy</button>
+    </div>
+  </div>
+  

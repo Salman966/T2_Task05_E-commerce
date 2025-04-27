@@ -1,0 +1,27 @@
+<!-- BANNER -->
+<img class="banner"
+     src="https://previews.123rf.com/images/marish/marish1711/marish171100013/88968286-set-of-cute-vintage-robots-banner-with-robot-toys-collection.jpg"
+     alt="Robot Banner" />
+
+<!-- PROMO SECTION -->
+
+<div class="promo-section">
+  <img class="promo-img" src="https://m.media-amazon.com/images/I/61HmveTPTsL._AC_UF1000,1000_QL80_.jpg" alt="left robot head">
+  <div class="promo-text">
+    <h2>DISPELL THE ROBOT APOCALYPSE MYTH</h2>
+    <p>SAVE 20% ON OUR FRIENDLIEST<br>ROBOT HEADS</p>
+  </div>
+  <img class="promo-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOPyFU_8DdkFIfbtF_lF5kEhoUyN__o0lc2g&s" alt="right robot head">
+</div>
+
+
+<!-- CATEGORIES -->
+<div class="category-row">
+    <div *ngFor="let cat of categories" class="category-item">
+      <a [routerLink]="['/catalog']" [queryParams]="{ category: cat.key }">
+        <img [src]="cat.imageUrl" [alt]="cat.name">
+        <p>{{ cat.name }}</p>
+      </a>
+    </div>
+  </div>
+  
