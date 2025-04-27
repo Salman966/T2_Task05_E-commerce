@@ -1,7 +1,0 @@
-{
-  "routes": {
-    "/T2_Task05_E-commerce": {},
-    "/T2_Task05_E-commerce/cart": {},
-    "/T2_Task05_E-commerce/catalog": {}
-  }
-}
