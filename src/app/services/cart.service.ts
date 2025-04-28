@@ -35,4 +35,6 @@ export class CartService {
       return sum + item.quantity * price;
     }, 0);
   }
+
+  
 }

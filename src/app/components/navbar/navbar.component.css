@@ -1,43 +1,60 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 25px;
-    background-color: white;
-    border-bottom: 1px solid #e5e5e5;
-    font-family: Arial, sans-serif;
-  }
-  
-  .navbar-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .shop-title {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .navbar-center a,
-  .navbar-right a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .register-link {
-    color: hotpink;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.shop-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-center a,
+.navbar-right a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.register-link {
+  color: hotpink;
+}
+
+.active-link {
+  color: hotpink;
+  font-weight: bold;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: hotpink;
+}

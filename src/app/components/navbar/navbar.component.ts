@@ -1,16 +1,19 @@
 import { Component, computed, inject } from '@angular/core';
-import { CartService } from '../../services/cart.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router'; // <-- ADD THIS
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive], 
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  cartService = inject(CartService);
-  cartCount = computed(() => this.cartService.cartCount());
+  private cartService = inject(CartService);
+
+  cartCount = computed(() => 
+    this.cartService.cartItems().reduce((count, item) => count + item.quantity, 0)
+  );
 }
