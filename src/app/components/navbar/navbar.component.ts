@@ -1,6 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router'; // <-- ADD THIS
+import { RouterLink, RouterLinkActive } from '@angular/router'; 
 import { CartService } from '../../services/cart.service';
 
 @Component({
