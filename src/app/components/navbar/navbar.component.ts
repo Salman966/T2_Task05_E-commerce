@@ -13,7 +13,13 @@ import { CartService } from '../../services/cart.service';
 export class NavbarComponent {
   private cartService = inject(CartService);
 
-  cartCount = computed(() => 
+  cartCount = computed(() =>
     this.cartService.cartItems().reduce((count, item) => count + item.quantity, 0)
   );
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

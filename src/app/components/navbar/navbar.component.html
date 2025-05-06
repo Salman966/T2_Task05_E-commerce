@@ -1,20 +1,45 @@
 <nav class="navbar">
+  <div class="navbar-mobile-top">
+    <div class="logo-group">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712076.png" alt="logo" class="logo">
+      <span class="shop-title">Robot Shop</span>
+    </div>
+    <div class="auth-group">
+      <a href="#">Sign In</a>
+      <span class="divider">|</span>
+      <a href="#" class="register-link">Register</a>
+    </div>
+  </div>
+
+  <div class="navbar-desktop">
     <div class="navbar-left">
       <img src="https://cdn-icons-png.flaticon.com/512/4712/4712076.png" alt="logo" class="logo">
       <span class="shop-title">Robot Shop</span>
     </div>
-  
-    <div class="navbar-center">
+
+    <nav class="navbar-center" aria-label="Main Navigation">
       <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       <a routerLink="/catalog" routerLinkActive="active-link">Catalog</a>
-      <a routerLink="/cart" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Cart ({{ cartCount() }})</a>
+      <a routerLink="/cart" routerLinkActive="active-link">Cart ({{ cartCount() }})</a>
+    </nav>
 
-          </div>
-  
     <div class="navbar-right">
       <a href="#">Sign In</a>
-      <span>|</span>
+      <span class="divider">|</span>
       <a href="#" class="register-link">Register</a>
     </div>
+  </div>
+
+  <div class="navbar-mobile-bottom">
+    <div class="left-group">
+      <button class="menu-btn" (click)="toggleMenu()">☰</button>
+      <a routerLink="/cart" routerLinkActive="active-link">Cart ({{ cartCount() }})</a>
+    </div>
+  </div>
+
+  <nav class="mobile-menu" [class.show]="isMenuOpen" aria-label="Mobile Menu">
+    <a routerLink="/" (click)="toggleMenu()">Home</a>
+    <a routerLink="/catalog" (click)="toggleMenu()">Catalog</a>
+    <a routerLink="/cart" (click)="toggleMenu()">Cart ({{ cartCount() }})</a>
   </nav>
-  
+</nav>

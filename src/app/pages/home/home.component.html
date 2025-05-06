@@ -15,13 +15,14 @@
 </div>
 
 
-<!-- CATEGORIES -->
-<div class="category-row">
-    <div *ngFor="let cat of categories" class="category-item">
-      <a [routerLink]="['/catalog']" [queryParams]="{ category: cat.key }">
-        <img [src]="cat.imageUrl" [alt]="cat.name">
-        <p>{{ cat.name }}</p>
-      </a>
-    </div>
-  </div>
+<!-- CAT -->
+<ul class="category-row">
+  <li *ngFor="let cat of categories" class="category-item">
+    <a [routerLink]="['/catalog']" [queryParams]="{ category: cat.key }">
+      <img [src]="cat.imageUrl" [alt]="cat.name">
+      <p>{{ cat.name }}</p>
+    </a>
+  </li>
+</ul>
+
   

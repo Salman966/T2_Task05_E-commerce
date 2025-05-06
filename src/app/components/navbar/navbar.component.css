@@ -1,22 +1,68 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 25px;
   background-color: white;
   border-bottom: 1px solid #e5e5e5;
   font-family: Arial, sans-serif;
+  padding: 10px 25px;
 }
 
-.navbar-left {
+.navbar-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
   display: flex;
   align-items: center;
+  gap: 15px;
+}
+
+.navbar-mobile-top {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-mobile-bottom {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-btn {
+  background: none;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
 }
 
 .logo {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
 }
 
 .shop-title {
@@ -24,20 +70,11 @@
   font-size: 18px;
 }
 
-.navbar-center a,
-.navbar-right a {
-  margin: 0 10px;
+.navbar a {
   text-decoration: none;
   color: black;
   font-size: 16px;
   position: relative;
-  padding-bottom: 4px;
-  transition: color 0.3s;
-}
-
-.navbar-right {
-  display: flex;
-  align-items: center;
 }
 
 .register-link {
@@ -53,8 +90,44 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
   height: 2px;
   width: 100%;
   background-color: hotpink;
+}
+
+.divider {
+  color: #e5e5e5;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px 25px;
+  border-top: 1px solid #e5e5e5;
+  gap: 15px;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile-top {
+    display: flex;
+  }
+
+  .navbar-mobile-bottom {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
