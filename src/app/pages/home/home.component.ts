@@ -19,12 +19,12 @@ export class HomeComponent {
     {
       name: 'ROBOT ARMS',
       key: 'arms',
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpXbielPBHsnRU0QF7Kn6kqO4lw7A73Rn-lA&s'
+      imageUrl: 'https://www.robotshop.com/cdn/shop/files/robotshop-m100rak-v4-modular-robotic-arm-kit-no-electronics-2_1024x.webp?v=1720521279'
     },
     {
       name: 'ROBOT TORSOS',
       key: 'torsos',
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ic_16aFaw1yc7D7WvxSPNtR8J7_fYqgzRQ&s'
+      imageUrl: 'https://www.buyourobot.com/wp-content/uploads/edd/2015/04/00102_body_thumb.jpg'
     },
     {
       name: 'ROBOT BASES',

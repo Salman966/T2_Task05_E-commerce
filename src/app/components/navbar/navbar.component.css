@@ -3,6 +3,8 @@
   border-bottom: 1px solid #e5e5e5;
   font-family: Arial, sans-serif;
   padding: 10px 25px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .navbar-desktop {
@@ -30,6 +32,15 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.no-hover-effect:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
 }
 
 .auth-group {
@@ -55,9 +66,15 @@
 
 .menu-btn {
   background: none;
-  font-size: 24px;
+  font-size: 28px;
   border: none;
   cursor: pointer;
+  color: hotpink;
+  transition: transform 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
 }
 
 .logo {
@@ -75,6 +92,14 @@
   color: black;
   font-size: 16px;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #fce4ec;
+  color: #453f42;
+  border-radius: 6px;
+  padding: 4px 8px;
 }
 
 .register-link {
@@ -113,6 +138,48 @@
   display: flex;
 }
 
+.mobile-menu a {
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  transform: translateX(5px);
+  background-color: #fce4ec;
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+
+.navbar a[href*="cart"] {
+  font-weight: 600;
+  position: relative;
+  padding-right: 22px;
+}
+
+.navbar a[href*="cart"] {
+  position: relative;
+  font-weight: 600;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  width: 20px;
+  height: 20px;
+  background: hotpink;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+
+
 @media (max-width: 768px) {
   .navbar-desktop {
     display: none;
@@ -124,10 +191,5 @@
 
   .navbar-mobile-bottom {
     display: flex;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 8px;
   }
 }
